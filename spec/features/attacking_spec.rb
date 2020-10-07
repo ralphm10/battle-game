@@ -15,6 +15,7 @@ feature 'attacking' do
     click_button('attack opponent')
     click_link 'OK'
     click_button('attack opponent')
-    expect(page).to have_content('Paul attacked John!')
+    click_link 'OK'
+    expect(page).to have_content('John: 50 Points')
   end
 end
