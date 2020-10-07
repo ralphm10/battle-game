@@ -24,4 +24,17 @@ describe Game do
       subject.attack(george)
     end
   end
+
+  describe '#current_turn' do
+    it 'starts with player 1' do
+      expect(game.current_turn).to eq george
+    end
+  end
+
+  describe '#switch turn' do
+    it 'switches turns' do
+      game.switch_turns
+      expect(game.current_turn).to eq ringo
+    end
+  end
 end
