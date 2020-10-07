@@ -3,8 +3,10 @@ require 'player'
 
 describe Game do
   subject(:game) { described_class.new(george, ringo) }
-  let(:george) { double :player }
-  let(:ringo) { double :player }
+  subject(:finished_game) { described_class.new(dead_player, ringo) }
+  let(:george) { double :player, points: 60 }
+  let(:ringo) { double :player, points: 60 }
+  let(:dead_player) { double :player, points: 0 }
 
   describe '#player1' do
     it 'accepts first player' do
@@ -35,6 +37,21 @@ describe Game do
     it 'switches turns' do
       game.switch_turns
       expect(game.current_turn).to eq ringo
+    end
+  end
+
+  describe '#game_over?' do
+    it 'returns false if both players have points' do
+      expect(game.game_over?).to be false
+    end
+    it 'ends the game when a player reaches 0 points' do
+      expect(finished_game.game_over?).to be true
+    end
+  end
+
+  describe '#loser' do
+    it 'returns a dead player' do
+      expect(finished_game.loser).to eq dead_player
     end
   end
 end

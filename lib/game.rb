@@ -22,4 +22,16 @@ class Game
       @player1
     end
   end
+
+  def game_over?
+    @player1.points.zero? || @player2.points.zero?
+  end
+
+  def loser
+    if @player1.points.zero?
+      @player1
+    else
+      @player2
+    end
+  end
 end

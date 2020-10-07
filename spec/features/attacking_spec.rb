@@ -6,16 +6,12 @@ feature 'attacking' do
   end
   scenario 'attack player 2 reduces hitpoints' do
     sign_in_and_play
-    click_button('attack opponent')
-    click_link 'OK'
+    attack_and_confirm
     expect(page).to have_content('Paul: 50 Points')
   end
   scenario 'attack player 1 and receive confirmation' do
     sign_in_and_play
-    click_button('attack opponent')
-    click_link 'OK'
-    click_button('attack opponent')
-    click_link 'OK'
+    2.times { attack_and_confirm }
     expect(page).to have_content('John: 50 Points')
   end
 end
