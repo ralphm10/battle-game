@@ -1,3 +1,11 @@
+# Battle!
+
+## Getting started
+```
+> git clone https://github.com/ralphm10/battle-game
+> bundle
+```
+
 ## Standard User Stories
 ```
 As two Players,
