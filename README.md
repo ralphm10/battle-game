@@ -1,5 +1,7 @@
 # Battle!
 
+My first web application, a (very) simple game built using Ruby and the Sinatra framework. 
+
 ## Getting started
 ```
 > git clone https://github.com/ralphm10/battle-game
