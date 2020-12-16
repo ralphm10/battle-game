@@ -1,6 +1,6 @@
 # Battle!
 
-My first web application, a (very) simple game built using Ruby and the Sinatra framework. 
+My first web application, a (very) simple game built using Ruby and the Sinatra framework and tested with Rspec and Capybara.  
 
 ## Getting started
 ```
