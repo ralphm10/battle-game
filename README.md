@@ -8,6 +8,13 @@ My first web application, a (very) simple game built using Ruby and the Sinatra 
 > bundle
 ```
 
+### To run locally
+```
+> rackup
+```
+Go to <code>localhost:9292</code>
+
+
 ## Standard User Stories
 ```
 As two Players,
