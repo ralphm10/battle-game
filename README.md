@@ -14,6 +14,11 @@ My first web application, a (very) simple game built using Ruby and the Sinatra 
 ```
 Go to <code>localhost:9292</code>
 
+### Running tests
+```
+> rspec
+```
+
 
 ## Standard User Stories
 ```
